@@ -7,6 +7,7 @@
 <meta name="description" content="MEBL COMERC is a company that deals with processing of wood.
 The center office is in Novi Sad, a plant in Backi Jarak. As part of the company is a primary processing facility (sawmill) and the final processing plant, where production is carried out various furniture and interior furnishing. Also, we have the vacuum dryer for drying lumber." />
 <link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type"text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -19,6 +20,12 @@ The center office is in Novi Sad, a plant in Backi Jarak. As part of the company
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
+	$(document).ready(function() {
+		$("div#banner").delay(500).slideDown(800);
+		$("#banner_close").click(function() {
+			$("div#banner").slideUp(800);
+		});
+	});
 </script>
 </head>
 <body>
@@ -53,6 +60,12 @@ In agreement with the customer is possible to supply and varnished battens.
 </div>
 <div id="footer">
 	<p>Copyright © 2010 <a href="http://nebjak.net">NEBOJSA & KATARINA</a</p>
+</div>
+<div id="banner" style="display:none; width:600px; z-index:10; position:absolute; top:100px; left:50%; margin-left:-300px; border: 10px solid #000; text-align:center; background-color:#fff; border-radius:20px;">
+	<a href="doors.html">
+		<img src="../vrata/banner-en.jpg" />
+	</a>
+	<a href="#" id="banner_close" style="color: #f00; text-decoration:none;"><strong>Close</strong></a>
 </div>
 </body>
 </html>
